@@ -1,0 +1,582 @@
+.B03-breadcrumb-underline {
+  width: 100%;
+  display: block;
+  height: 1px;
+  background-color: #eeeeee;
+}
+.B03-catecory-title {
+  background-color: #98ad5c;
+  font-size: 1.8rem;
+  color: #fff;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-weight: 500;
+  padding-left: 17px;
+  border-radius: 6px 6px 0 0;
+
+  @include mq(md) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+.B03-gallery {
+  margin: 15px auto 0;
+
+  @include mq(md) {
+    margin: 35px auto 0;
+    max-width: 630px;
+  }
+}
+.B03-gallery__main-img {
+  position: relative;
+  width: 100%;
+
+  &:before {
+    content: "";
+    display: block;
+    padding-top: calc(230 / 375 * 100%);
+
+    @include mq("md") {
+      padding-top: calc(386 / 630 * 100%);
+    }
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.B03-gallery__sub-img {
+  margin-top: 7px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+
+  @include mq(md) {
+    margin-top: 17px;
+    padding: 0;
+  }
+}
+.B03-gallery__sub-img li {
+  margin-right: 9px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 82px;
+  max-height: 55px;
+
+  @include mq(md) {
+    max-width: 148px;
+    max-height: 100px;
+  }
+}
+.B03-gallery__sub-img li::before {
+  content: "";
+  display: block;
+  padding-top: calc(55 / 82 * 100%);
+
+  @include mq("md") {
+    padding-top: calc(99 / 148 * 100%);
+  }
+}
+.B03-gallery__sub-img li > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.B03-gallery__sub-img li:nth-child(4n) {
+  margin-right: 0;
+}
+
+.B03-container {
+  @include mq("md") {
+    margin: 0 auto;
+    max-width: 1010px;
+    width: 100%;
+    padding-left: $padding-pc;
+    padding-right: $padding-pc;
+  }
+}
+.B03-section-wrapper {
+  @include mq("md") {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+.B03-availability,
+.B03-salon-info {
+  @include mq(md) {
+    width: 48.387096774%;
+  }
+}
+// .B03-shop-name
+.B03-shop-name h2 {
+  font-size: 18px;
+  font-weight: 500;
+  color: $color-main;
+  margin-top: 26px;
+  padding-left: 10px;
+
+  @include mq(md) {
+    font-size: 30px;
+    padding-left: 0;
+    margin-top: 57px;
+  }
+}
+
+// B03-availability
+.B03-availability {
+  margin-top: 18px;
+}
+.B03-availability__inner {
+  padding: 0 10px;
+  margin: 0 auto;
+  width: 100%;
+
+  @include mq(md) {
+    padding: 0;
+  }
+}
+.B03-availability__link {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6px;
+
+  @include mq(md) {
+    margin-top: 18px;
+  }
+}
+.B03-anchor-text-left,
+.B03-anchor-text-right {
+  display: inline-block;
+  font-size: 14px;
+  color: $color-main;
+  font-weight: 400;
+}
+.B03-anchor-text-left {
+  padding-left: 14px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    border: 0px;
+    border-bottom: solid 1px #6f8d1b;
+    border-left: solid 1px #6f8d1b;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg) translateY(-50%);
+    width: 6px;
+    height: 6px;
+    top: 50%;
+    left: 0;
+  }
+}
+.B03-anchor-text-right {
+  padding-right: 12px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    border: 0px;
+    border-top: solid 1px #6f8d1b;
+    border-right: solid 1px #6f8d1b;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg) translateY(-50%);
+    width: 6px;
+    height: 6px;
+    top: 50%;
+    right: 2px;
+  }
+}
+.B03-pull-down {
+  width: 132px;
+}
+.B03-pull-down .pull-down__select {
+  padding: 4px 14px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.B03-pull-down .pull-down__select:invalid {
+  color: #333;
+}
+.B03-availability__calender {
+  margin-top: 5px;
+}
+// --------------
+// B03-table
+// --------------
+.B03-table {
+  border-collapse: collapse;
+  width: 100%;
+  border-left: solid 1px #eeeeee;
+  border-right: solid 1px #eeeeee;
+  border-bottom: solid 1px #eeeeee;
+}
+
+.B03-table__date {
+  background-color: $color-bright-green;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: "Lato", sans-serif;
+  height: 47px;
+  width: 65px;
+}
+// 土曜の色
+.B03-table__date:nth-child(5) {
+  background-color: #6597a0;
+}
+// 日曜の色
+.B03-table__date:nth-child(6) {
+  background-color: #a26d8b;
+}
+.B03-table__date span {
+  display: block;
+  font-size: 14px;
+  font-family: "Lato";
+}
+.B03-table td {
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  height: 37px;
+  width: 65px;
+}
+.B03-table td:first-of-type {
+  border-left: 1px solid #eeeeee;
+}
+// 土日の列の背景色
+.B03-table td:nth-of-type(5),
+.B03-table td:nth-of-type(6) {
+  background-color: #f2f5e9;
+}
+// マルのセル
+.B03-table__circle {
+  background-image: url(/image/common/icon-circle.png);
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+// バツのセル
+.B03-table__cross {
+  background-image: url(/image/common/icon-cross.png);
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+//三角のセル
+.B03-table__triangle {
+  background-image: url(/image/common/icon-triangle.png);
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.B03-availability__textBox {
+  margin-top: 4px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+
+  @include mq(md) {
+    margin-top: 13px;
+    font-size: 14px;
+  }
+}
+.B03-availability-text a {
+  text-decoration: underline;
+}
+.B03-icon-text-anchor {
+  display: inline-block;
+  color: $color-bright-green;
+  text-decoration: underline;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  padding-left: 16px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 11px;
+    height: 9px;
+    background-image: url(/image/common/page-icon-green.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.B03-availability .B03-icon-text-anchor {
+  margin-top: 21px;
+
+  @include mq(md) {
+    margin-top: 40px;
+  }
+}
+
+// .B03-salon-info
+.B03-salon-info {
+  margin-top: 29px;
+
+  @include mq(md) {
+    margin-top: 18px;
+  }
+}
+.B03-salon-info__inner {
+  padding: 0 10px;
+  margin-top: 28px;
+
+  @include mq(md) {
+    padding: 0 3px;
+    margin-top: 18px;
+  }
+}
+.B03-salon-info__content dt {
+  background-color: #f5f5f5;
+  padding: 8px;
+}
+.B03-salon-info__content dd {
+  padding: 9px;
+}
+.B03-salon-info .B03-icon-text-anchor {
+  margin-top: 14px;
+
+  @include mq(md) {
+    margin-top: 19px;
+  }
+}
+
+// B03-access
+.B03-access {
+  margin-top: 30px;
+}
+.B03-access__inner {
+  margin-top: 30px;
+}
+.B03-access__map {
+  position: relative;
+  width: 100%;
+  max-width: 630px;
+  margin: 0 auto;
+  &:before {
+    content: "";
+    display: block;
+    padding-top: calc(155 / 375 * 100%);
+
+    @include mq("md") {
+      padding-top: calc(270 / 630 * 100%);
+    }
+  }
+}
+
+.B03-access__map iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// B03-service
+.B03-service {
+  margin-top: 28px;
+
+  @include mq(md) {
+    margin-top: 18px;
+  }
+}
+.B03-service__content {
+  margin: 30px auto 0;
+  max-width: 278px;
+
+  @include mq(md) {
+    max-width: 930px;
+  }
+}
+.B03-service__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mq(md) {
+    justify-content: center;
+  }
+}
+.B03-service__item:not(:nth-child(4n)) {
+  margin-right: 50px;
+}
+.B03-service__item:nth-child(4n) {
+  @include mq(md) {
+    margin-right: 50px;
+  }
+}
+.B03-service__item:last-child {
+  @include mq(md) {
+    margin-right: 0;
+  }
+}
+.B03-service__item:nth-child(n + 5) {
+  margin-top: 19px;
+
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+.B03-service__item {
+  width: 32px;
+  text-align: center;
+}
+.B03-service__item .B03-service__icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+.B03-service__name {
+  display: block;
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 500;
+  color: $color-bright-green;
+}
+
+// B03-registration-details
+.B03-registration-details {
+  margin-top: 38px;
+
+  @include mq(md) {
+    margin-top: 56px;
+  }
+}
+.B03-registration-details__inner {
+  padding: 0 10px;
+  margin-bottom: 72px;
+  @include mq(md) {
+    padding: 0;
+    margin-bottom: 100px;
+  }
+}
+.B03-registration-details__content {
+  margin-top: 27px;
+  padding-left: 7px;
+
+  @include mq(md) {
+    padding-left: 0;
+  }
+}
+.B03-registration-details__item {
+  display: flex;
+  align-items: flex-start;
+  font-size: 12px;
+  font-weight: 400;
+
+  @include mq(md) {
+    font-size: 14px;
+    letter-spacing: 0.05em;
+  }
+}
+.B03-registration-details__item dt {
+  padding-left: 7px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 5px;
+    background: #000;
+    top: 58%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+.B03-registration-details__item + .B03-registration-details__item {
+  margin-top: 6px;
+
+  @include mq(md) {
+    margin-top: 7px;
+  }
+}
+
+// .B03-cta-area
+.B03-cta-area {
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+  background-color: rgba($color: #e4ead3, $alpha: 0.7);
+  display: flex;
+  @include mq(md) {
+    padding-left: 29%;
+  }
+}
+.B03-backto-list-button {
+  background-color: #fff;
+  color: #6f8d1b;
+  border: 1px solid #6f8d1b;
+  display: inline-block;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  width: 121px;
+  border-radius: 24px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  margin-right: 8px;
+
+  @include mq(md) {
+    width: 147px;
+    margin-right: 16px;
+  }
+}
+.B03-reservation-button {
+  background-color: $color-accent-orange;
+  color: #fff;
+  display: inline-block;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  border-radius: 24px;
+  text-align: center;
+  padding-left: 45px;
+  padding-right: 21px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  margin-right: 8px;
+  position: relative;
+
+  @include mq(md) {
+    padding-left: 59px;
+    padding-right: 34px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    left: 23px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url(/image/common/icon-reserve-white.svg);
+
+    @include mq(md) {
+      left: 35px;
+    }
+  }
+}

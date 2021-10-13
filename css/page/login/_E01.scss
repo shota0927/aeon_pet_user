@@ -1,0 +1,217 @@
+// --------------
+// E01-inner
+// --------------
+.E01-inner {
+  width: 100%;
+  max-width: 534px;
+  margin: 0 auto;
+  padding-left: $padding-sp;
+  padding-right: $padding-sp;
+  padding-top: 37px;
+  padding-bottom: 84px;
+  @include mq(md) {
+    padding-left: $padding-pc;
+    padding-right: $padding-pc;
+    max-width: 1010px;
+    padding-top: 42px;
+    padding-bottom: 127px;
+  }
+}
+
+// --------------
+// E01-u-mobile
+// --------------
+.E01-u-mobile {
+  display: block;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+// --------------
+// E01-page-title
+// --------------
+.E01-page-title {
+  font-size: 24px;
+  font-weight: normal;
+  color: $color-main;
+  text-align: center;
+  @include mq(md) {
+    font-size: 30px;
+  }
+}
+
+// --------------
+// E01-input
+// --------------
+.E01-input {
+  margin-top: 24px;
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+    max-width: 609px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 43px;
+  }
+}
+.E01-input:not(:first-of-type) {
+  margin-top: 20px;
+  @include mq(md) {
+    margin-top: 25px;
+  }
+}
+.E01-input .input__area--default {
+  width: 100%;
+  @include mq(md) {
+    width: 430px;
+  }
+}
+.E01-input .input__wrapper {
+  margin-top: 13px;
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+
+// --------------
+// E01-input-title
+// --------------
+.E01-input-title {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+.E01-input-title__text {
+  font-size: 16px;
+  font-weight: 400;
+}
+.E01-input-title__icon {
+  margin-top: 4px;
+  margin-right: 6px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1;
+  width: 32px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  background-color: #f4451c;
+  @include mq(md) {
+    margin-right: 10px;
+  }
+}
+.E01-input__wrapper {
+  position: relative;
+}
+.E01-input__icon-password {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+
+// --------------
+// E01-check
+// --------------
+.E01-check {
+  width: 228px;
+  margin: 0 auto;
+  margin-top: 18px;
+  @include mq(md) {
+    margin-top: 21px;
+  }
+}
+.E01-check input[type="checkbox"]+label{
+  display: none;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  padding-left: 32px;
+  font-size: 16px;
+}
+.E01-check input[type="checkbox"]+label::before{
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  width: 22px;
+  height: 22px;
+  margin-top: -10px;
+  left: 0;
+  top: 50%;
+  border-radius: 4px;
+  border: 1px solid;
+  border-color:  #D5D5D5;
+  background-color: #FFF;
+}
+.E01-check input[type="checkbox"]:checked+label::before{
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  width: 22px;
+  height: 22px;
+  margin-top: -10px;
+  left: 0;
+  top: 50%;
+  border-radius: 4px;
+  border: initial;
+  background-color: $color-main;
+}
+.E01-check input[type="checkbox"]:checked+label::after{
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  width: 13px;
+  height: 7px;
+  margin-top: -9px;
+  top: 70%;
+  left: 4.5px;
+  transform: rotate(-45deg);
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  border-color: #fff;
+}
+
+// --------------
+// E01-login-button
+// --------------
+.E01-login-button {
+  text-align: center;
+  margin-top: 31px;
+  @include mq(md) {
+    margin-top: 40px;
+  }
+}
+
+// --------------
+// E01-other-link
+// --------------
+.E01-other-link {
+  text-align: center;
+}
+.E01-other-link {
+  margin-top: 40px;
+  @include mq(md) {
+    margin-top: 46px;
+  }
+}
+.E01-other-link:not(:first-of-type) {
+  margin-top: 38px;
+  @include mq(md) {
+    margin-top: 56px;
+  }
+}
+.E01-other-link .anchor-text {
+  display: inline-block;
+  margin-top: 11px;
+  @include mq(md) {
+    margin-top: 28px;
+  }
+}

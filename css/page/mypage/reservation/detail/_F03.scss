@@ -1,0 +1,363 @@
+// --------------
+// F03-inner
+// --------------
+.F03-inner {
+  width: 100%;
+  max-width: 534px;
+  margin: 0 auto;
+  padding-left: $padding-sp;
+  padding-right: $padding-sp;
+  @include mq(md) {
+    padding-left: $padding-pc;
+    padding-right: $padding-pc;
+    max-width: 1010px;
+  }
+}
+
+// --------------
+// F03-u-mobile
+// --------------
+.F03-u-mobile {
+  display: block;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+// --------------
+// F03-page-title
+// --------------
+.F03-page-title {
+  font-size: 24px;
+  font-weight: normal;
+  color: $color-main;
+  text-align: center;
+  margin-top: 37px;
+  @include mq(md) {
+    font-size: 30px;
+    margin-top: 42px;
+  }
+}
+
+// --------------
+// F03-detail
+// --------------
+.F03-detail {
+  margin-top: 20px;
+  @include mq(md) {
+    margin-top: 43px;
+  }
+}
+.F03-detail__price-menu {
+  margin-top: 20px;
+  @include mq(md) {
+    margin-top: 30px;
+    padding: 0 20px;
+  }
+}
+.F03-detail__button {
+  text-align: center;
+  margin-top: 35px;
+}
+.F03-detail__button .most-important-button {
+  width: 304px;
+}
+
+// --------------
+// F03-table
+// --------------
+.F03-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  line-height: 1.42857143;
+  width: 100%;
+  @include mq(md) {
+    line-height: 1;
+  }
+}
+.F03-table th{
+  font-size: 12px;
+  font-weight: normal;
+  padding: 13px 15px 18px;
+  background-color: $color-thin-green;
+  text-align: left;
+  border-bottom: 1px solid #fff;
+  width: 120px;
+  @include mq(md) {
+    width: 248px;
+    font-size: 16px;
+    padding: 13px 20px 21px;
+  }
+}
+.F03-table tr:last-child th{
+  border-bottom: none;
+}
+.F03-table td{
+  font-size: 14px;
+  font-weight: normal;
+  padding: 12px 15px 15px;
+  width: 221px;
+  @include mq(md) {
+    width: 682px;
+    font-size: 16px;
+    padding: 13px 20px 19px;
+  }
+}
+
+// --------------
+// F03-price-menu
+// --------------
+.F03-price-menu__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  @include mq(md) {
+    padding-bottom: 5px;
+  }
+}
+.F03-price-menu__item:last-child {
+  @include mq(md) {
+    padding-bottom: 16px;
+  }
+}
+.F03-price-menu__item--total {
+  border-top: solid 1px #DEDEDE;
+  padding-top: 8px;
+  padding-bottom: 0;
+  @include mq(md) {
+    padding-top: 0;
+  }
+}
+.F03-price-menu__item.F03-price-menu__item--total {
+  @include mq(md) {
+    padding-bottom: 0;
+  }
+}
+.F03-price-menu__title {
+  font-size: 16px;
+  font-weight: 400;
+}
+.F03-price-menu__price {
+  font-size: 12px;
+  @include mq(md) {
+    font-size: 16px;
+  } 
+}
+.F03-price-menu__price span {
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 3px;
+  font-family: 'Lato';
+  @include mq(md) {
+    font-weight: 700;
+    font-size: 24px;
+  }
+}
+.F03-price-menu__caution {
+  font-size: 14px;
+  margin-top: 22px;
+  line-height: 1.42857143;
+  @include mq(md) {
+    margin-top: 20px;
+  }
+}
+
+// --------------
+// F03-cancel
+// --------------
+.F03-cancel {
+  margin-top: 30px;
+  margin-bottom: 66px;
+  @include mq(md) {
+    margin-top: 45px;
+    margin-bottom: 101px;
+  }
+}
+.F03-cancel__text {
+  text-align: left;
+  font-size: 14px;
+  @include mq(md) {
+    text-align: center;
+    font-size: 16px;
+  }
+}
+.F03-cancel__limit {
+  line-height: 1;
+  text-align: center;
+  padding: 10px;
+  background-color: #FDF4F5;
+  border-radius: 6px;
+  border: 1px dotted #FF0000;
+  font-size: 14px;
+  margin-top: 21px;
+  @include mq(md) {
+    padding-top: 19px;
+    padding-bottom: 20px;
+    font-size: 16px;
+    margin-top: 18px;
+  }
+}
+.F03-cancel__limit span {
+  display: block;
+  margin-top: 8px;
+  color: #FF0000;
+  font-size: 16px;
+  @include mq(md) {
+    margin-top: 13px;
+  }
+}
+.F03-cancel__button {
+  text-align: center;
+  margin-top: 30px;
+  @include mq(md) {
+    margin-top: 35px;
+  }
+}
+.F03-cancel__button .most-important-button {
+  width: 220px;
+}
+.F03-cancel__text2 {
+  text-align: left;
+  font-size: 14px;
+  margin-top: 20px;
+  @include mq(md) {
+    margin-top: 19px;
+    text-align: center;
+  } 
+}
+.F03-cancel__anchor-text {
+  text-align: center;
+  margin-top: 26px;
+  @include mq(md) {
+    margin-top: 47px;
+  }
+}
+
+
+// ------------------------------------
+// 以下、キャンセルモーダルの記述
+// ------------------------------------
+// --------------
+// F03-cancel-modal
+// --------------
+.F03-cancel-modal {
+  height: 100vh;
+  background: rgba(#000, 0.4);
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 0 20px;
+}
+.F03-cancel-modal__wrapper {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.F03-cancel-modal__container {
+  position: relative;
+  background: $color-background-base;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 35px 25px;
+  @include mq(md) {
+    padding: 40px 58px;
+  }
+}
+.F03-cancel-modal__xbtn {
+  position: absolute;
+  right: -18px;
+  top: -18px;
+  width: 40px;
+  background: $color-accordion-icon;
+}
+.F03-cancel-modal__interview-wrapper {
+  @include mq(md) {
+    max-width: 432px;
+    margin: 0 auto;
+  }
+}
+.F03-cancel-modal__alert-icon {
+  display: block;
+  width: 31px;
+  height: 31px;
+  margin: 0 auto;
+}
+.F03-cancel-modal__text {
+  color: $color-warning;
+  font-size: 16px;
+  text-align: center;
+}
+.F03-cancel-modal__sub-text {
+  font-size: 12px;
+  text-align: center;
+}
+.F03-cancel-modal__interview {
+  margin-top: 25px;
+}
+.F03-cancel-modal__interview:not(:first-of-type) {
+  margin-top: 17px;
+}
+.F03-cancel-modal__btn-wrapper {
+  margin-top: 30px;
+  text-align: center;
+}
+
+// --------------
+// F03-interview__title
+// --------------
+.F03-interview__title{
+  font-size: 14px;
+}
+.F03-interview__pulldown {
+  margin-top: 6px;
+  height: 46px;
+  width: 100%;
+  @include mq(md) {
+    width: 341px;
+  }
+}
+.F03-interview__pulldown .select__wrapper {
+  color: #333;
+}
+.F03-interview__textarea {
+  margin-top: 6px;
+  height: 140px;
+}
+.F03-interview__textarea textarea::placeholder {
+  color: #D5D5D5;
+}
+.F03-interview__textarea textarea {
+  width: 100%;
+  max-width: initial;
+}
+
+// --------------
+// F03-btn-wrapper
+// --------------
+.F03-btn-wrapper__button {
+  display: inline-block;
+  height: 48px;
+}
+.F03-btn-wrapper__button--red {
+  background: $color-warning;
+  border: none;
+  color: #fff;
+}
+.F03-btn-wrapper__button:not(:first-of-type) {
+  margin-top: 20px;
+  margin-left: 0;
+  @include mq(md) {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+}
+
+
+
+

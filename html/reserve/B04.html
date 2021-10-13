@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>予約｜PETEMO グルーミングサロン 予約サイト</title>
+  <meta name="description" content="PETEMO グルーミングサロン 予約サイトの「予約」ページです。イオンペットは、動物と人間の幸せな共生社会の実現を目指します。">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- datepicker -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <!-- css -->
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/script.js"></script>
+  <script src="/js/search_shop/shop/B02.js"></script>
+  <link rel="icon" href="" />
+</head>
+
+<body>
+
+  <!-- header  -->
+  <header class="header">
+    <div class="header__left">
+      <h1>
+        <a href="/">
+          <picture class="header__logo" aria-hidden="true">
+            <source srcset="/image/common/logo-pc.png" media="(min-width: 768px)" class="header__logo-pc" />
+            <img src="/image/common/logo-sp.png" alt="ロゴ" class="header__logo-sp" />
+          </picture>
+        </a>
+      </h1>
+      <a href="" class="header__search"><img src="/image/common/search-icon.png" alt="サーチアイコン">店舗検索・ご予約</a>
+    </div>
+    <div class="header__right">
+      <div class="header__btns">
+        <a href="" class="header__login">ログイン</a>
+        <a href="" class="header__member">無料会員登録</a>
+      </div>
+      <div class="hamburger__menu js-hamburger--non-login">
+        <img src="/image/common/hamburger__menu-icon.png" alt="ハンバーガーアイコン">
+      </div>
+    </div>
+    <nav class="header__nav header-nav header-nav--non-login">
+      <div class="header-nav__title">
+        <p class="sp">こんにちは<br>ゲストさん (ログイン)</p>
+        <p class="pc">こんにちは　ゲストさん (ログイン)</p>
+        <div class="header-nav__bars js-bars">
+          <span class="header-nav__bar header-nav__bar--left"></span>
+          <span class="header-nav__bar header-nav__bar--right"></span>
+        </div>
+      </div>
+      <ul class="header-nav__items">
+        <li class="header-nav__item">
+          <a href="#"><img class="header-nav__title-icon" src="/image/common/home-icon.png" alt="">ホーム</a>
+        </li>
+        <li class="header-nav__item">
+          <a href="#"><img class="header-nav__title-icon" src="/image/common/search-icon-small.png" alt="">店舗検索・ご予約</a>
+        </li>
+        <li class="header-nav__item">
+          <a href="#"><img class="header-nav__title-icon" src="/image/common/login-icon.png" alt="">ログイン</a>
+        </li>
+      </ul>
+      <ul class="header-nav__items">
+        <li class="header-nav__item">
+          <a href="#"><img class="header-nav__title-icon" src="/image/common/booking-icon-green.png" alt="">ご予約方法</a>
+        </li>
+        <li class="header-nav__item">
+          <a href="#"><img class="header-nav__title-icon" src="/image/common/mypage-icon-green.png"
+              alt="">マイページのご利用方法</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header__burger-musk"></div>
+  </header>
+  <!-- breadcrumb  -->
+  <div class="breadcrumb B04-1-breadcrumb">
+    <div class="inner">
+      <span class="breadcrumb__item">
+        <a href="" class="brandcrumb__item-link">
+          <img src="/image/common/breadcrumb-top-icon.png" alt="トップに戻るアイコン" class="breadcrumb__item-icon">
+        </a>
+      </span>
+      /
+      <span class="breadcrumb__item">
+        <span class="brandcrumb__item-link">
+          予約
+        </span>
+      </span>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ B04-1-wrapper　-->
+  <main class="B04-1-wrapper">
+
+    <!-- B04-1-page-title -->
+    <h2 class="B04-1-page-title">PETEMO札幌苗穂店</h2>
+
+    <!-- B04-1-pet-select -->
+    <section class="B04-1-pet-select">
+      <h3 class="B04-1-section-title">
+        <span class="B04-1-section-title__number">1</span>予約するペットを選択
+      </h3>
+      <div class="B04-1-inner">
+        <div class="B04-1-pet-select__box">
+          <!-- プルダウン 小 -->
+          <div class="pull-down">
+            <select class="pull-down__select" required>
+              <option value="">未選択</option>
+              <option value="option1" selected>小太郎</option>
+              <option value="option2">ペット2</option>
+              <option value="option3">ペット3</option>
+            </select>
+          </div>
+          <div class="B04-1-pet-select__button">
+            <!-- ボタン（サブ） 新規登録 -->
+            <a href="" class="small-button--sign-up"><img src="/image/common/signup-icon.png" alt="十字アイコン">複数頭ご予約</a>
+          </div>
+        </div>
+      </div><!-- /.B04-1-inner -->
+    </section><!-- /.B04-1-pet-select -->
+
+    <!-- B04-1-menu-select -->
+    <section class="B04-1-menu-select">
+      <h3 class="B04-1-section-title">
+        <span class="B04-1-section-title__number">2</span>予約するメニューを選択
+      </h3>
+      <div class="B04-1-inner">
+        <!-- プルダウン 小 -->
+        <div class="B04-1-menu-select__pull-down pull-down">
+          <select class="pull-down__select" required>
+            <option value="">未選択</option>
+            <option value="option1" selected>シャンプーコース</option>
+            <option value="option2">コース2</option>
+            <option value="option3">コース3</option>
+          </select>
+        </div>
+        <ul class="B04-1-menu-select__options">
+          <li class="B04-1-menu-select__option B04-1-option B04-1-option--active">
+            <span class="B04-1-option__check-icon"></span>
+            トリートメント
+            <span class="B04-1-option__delete-button">×</span>
+            <span class="B04-1-option__add-button">追加</span>
+          </li>
+          <li class="B04-1-menu-select__option B04-1-option B04-1-option--inactive">
+            <span class="B04-1-option__check-icon"></span>
+            トリートメント
+            <span class="B04-1-option__delete-button">×</span>
+            <span class="B04-1-option__add-button">追加</span>
+          </li>
+          <li class="B04-1-menu-select__option B04-1-option B04-1-option--inactive">
+            <span class="B04-1-option__check-icon"></span>
+            オプションの選択
+            <span class="B04-1-option__delete-button">×</span>
+            <span class="B04-1-option__add-button">選択</span>
+          </li>
+        </ul>
+        <p class="B04-1-menu-select__text B04-1-text">
+          オプションはご予約時間前であれば変更・追加が可能です。
+        </p>
+      </div><!-- /.B04-1-inner -->
+    </section><!-- /.B04-1-menu-select -->
+
+    <!-- B04-1-staff-select -->
+    <section class="B04-1-staff-select">
+      <h3 class="B04-1-section-title">
+        <span class="B04-1-section-title__number">3</span>担当スタッフを指名する
+      </h3>
+      <div class="B04-1-inner">
+        <div class="B04-1-staff-select__box">
+          <!-- プルダウン 小 -->
+          <div class="pull-down">
+            <select class="pull-down__select" required>
+              <option value="">未選択</option>
+              <option value="option1" selected>指名なし</option>
+              <option value="option2">スタッフ2</option>
+              <option value="option3">スタッフ3</option>
+            </select>
+          </div>
+        </div>
+        <p class="B04-1-staff-select__text B04-1-text">
+          担当者ご指名の場合は別途指名料（税込み1,100円）をいただいております。
+        </p>
+      </div><!-- /.B04-1-inner -->
+    </section><!-- /.B04-1-staff-select -->
+
+    <!-- B04-1-date-select -->
+    <section class="B04-1-date-select">
+      <h3 class="B04-1-section-title">
+        <span class="B04-1-section-title__number">4</span>日時を選択
+      </h3>
+      <div class="B04-1-inner">
+        <p class="B04-1-date-select__text B04-1-text">
+          ご希望の受付時間を選択してください。
+        </p>
+      </div><!-- /.B04-1-inner -->
+      <div class="B04-1-date-select__table-head">
+        <!-- ボタン（サブ） 左矢印 -->
+        <a href="" class="small-button--last-week">前週</a>
+        <!-- プルダウン 小 -->
+        <div class="pull-down">
+          <select class="pull-down__select" required>
+            <option value="">未選択</option>
+            <option value="option1" selected>2021年7月</option>
+            <option value="option2">2021年8月</option>
+            <option value="option3">2021年9月</option>
+          </select>
+        </div>
+        <!-- ボタン（サブ） 右矢印 -->
+        <a href="" class="small-button--next-week">翌週</a>
+      </div>
+      <table class="B04-1-date-select__table B04-1-table">
+        <tbody>
+          <tr>
+            <th class="B04-1-table__date"></th>
+            <th class="B04-1-table__date"><span>10</span>土</th>
+            <th class="B04-1-table__date"><span>11</span>日</th>
+            <th class="B04-1-table__date"><span>12</span>月</th>
+            <th class="B04-1-table__date"><span>13</span>火</th>
+            <th class="B04-1-table__date"><span>14</span>水</th>
+            <th class="B04-1-table__date"><span>15</span>木</th>
+            <th class="B04-1-table__date"><span>16</span>金</th>
+            <th class="B04-1-table__date B04-1-u-desktop"></th>
+          </tr>
+          <tr>
+            <th class="B04-1-table__time">9:00</th>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <th class="B04-1-table__time B04-1-u-desktop">9:00</th>
+          </tr>
+          <tr>
+            <th class="B04-1-table__time">10:00</th>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__cross"></td>
+            <td class="B04-1-table__circle B04-1-table__selected"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <th class="B04-1-table__time B04-1-u-desktop">10:00</th>
+          </tr>
+          <tr>
+            <th class="B04-1-table__time">11:00</th>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__cross"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <th class="B04-1-table__time B04-1-u-desktop">11:00</th>
+          </tr>
+          <tr>
+            <th class="B04-1-table__time">12:00</th>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <th class="B04-1-table__time B04-1-u-desktop">12:00</th>
+          </tr>
+          <tr>
+            <th class="B04-1-table__time">13:00</th>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <th class="B04-1-table__time B04-1-u-desktop">13:00</th>
+          </tr>
+          <tr>
+            <th class="B04-1-table__time">14:00</th>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <th class="B04-1-table__time B04-1-u-desktop">14:00</th>
+          </tr>
+          <tr>
+            <th class="B04-1-table__time">15:00</th>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <th class="B04-1-table__time B04-1-u-desktop">15:00</th>
+          </tr>
+          <tr>
+            <th class="B04-1-table__time">16:00</th>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <th class="B04-1-table__time B04-1-u-desktop">16:00</th>
+          </tr>
+          <tr>
+            <th class="B04-1-table__time">17:00</th>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <th class="B04-1-table__time B04-1-u-desktop">17:00</th>
+          </tr>
+          <tr>
+            <th class="B04-1-table__time">18:00</th>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <th class="B04-1-table__time B04-1-u-desktop">18:00</th>
+          </tr>
+          <tr>
+            <th class="B04-1-table__time">19:00</th>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <th class="B04-1-table__time B04-1-u-desktop">19:00</th>
+          </tr>
+          <tr>
+            <th class="B04-1-table__time">20:00</th>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <td class="B04-1-table__circle"></td>
+            <th class="B04-1-table__time B04-1-u-desktop">20:00</th>
+          </tr>
+        </tbody>
+      </table>
+      <div class="B04-1-inner">
+        <div class="B04-1-date-select__selected-date">
+          選択した受付日時：<br class="B04-1-u-mobile">
+          2021年7月13日（火）9:30
+        </div>
+      </div>
+    </section><!-- /.B04-1-staff-select -->
+
+    <!-- B04-1-coupon-select -->
+    <section class="B04-1-coupon-select">
+      <h3 class="B04-1-section-title">
+        <span class="B04-1-section-title__number">5</span>キャンペーン・クーポンの選択
+      </h3>
+      <div class="B04-1-inner">
+        <ul class="B04-1-coupon-select__options">
+          <li class="B04-1-menu-select__option B04-1-option B04-1-option--active">
+            <span class="B04-1-option__check-icon"></span>
+            キャンペーン・クーポン名
+            <span class="B04-1-option__delete-button">×</span>
+            <span class="B04-1-option__add-button">追加</span>
+          </li>
+          <li class="B04-1-coupon-select__option B04-1-option B04-1-option--inactive">
+            <span class="B04-1-option__check-icon"></span>
+            <p class="B04-1-option__title">キャンペーン・クーポン<span class="B04-2-new-line">の選択</span></p>
+            <span class="B04-1-option__delete-button">×</span>
+            <span class="B04-1-option__add-button">選択</span>
+          </li>
+          
+        </ul>
+      </div><!-- /.B04-1-inner -->
+    </section><!-- /.B04-1-menu-select -->
+
+    <!-- B04-1-button-area -->
+    <section class="B04-1-button-area">
+      <div class="B04-1-inner">
+        <!-- ボタン（最重要） -->
+        <a href="" class="most-important-button">予約確認へ</a>
+        <p class="B04-1-button-area__text B04-1-text">
+          ご希望のお日にちに空きがありませんか？
+        </p>
+        <!-- ボタン（戻る・修正など サブ） -->
+        <a href="" class="sub-button">別のサロンを検索する</a>
+      </div>
+    </section>
+
+  </main><!-- メインコンテンツ /.B04-1-wrapper　-->
+
+  <!-- footer  -->
+  <footer class="footer">
+    <a class="footer__page-top-button" href="#">
+      <span></span>
+    </a>
+    <div class="footer__inner">
+      <div class="footer__logo">
+        <img src="/image/common/footer-logo.png" alt="ロゴ">
+      </div>
+      <nav class="footer__nav">
+        <ul class="footer__nav-items--top">
+          <li class="footer__nav-item--top">
+            <a href="">
+              <img class="footer__icon" src="/image/common/booking-icon.png" alt="">ご予約方法
+            </a>
+          </li>
+          <li class="footer__nav-item--top">
+            <a href="">
+              <img class="footer__icon" src="/image/common/mypage-icon.png" alt="">マイページのご利用方法
+            </a>
+          </li>
+        </ul>
+        <div class="footer__wrapper">
+          <ul class="footer__nav-items--bottom-left">
+            <li class="footer__nav-item">
+              <a href=""><span class="footer__arrow-right"></span>
+                会員規約
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="">
+                <img class="footer__icon--page" src="/image/common/page-icon.png" alt="">プライバシーポリシー
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="">
+                <img class="footer__icon--page" src="/image/common/page-icon.png" alt="">お問い合わせ
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="">
+                <img class="footer__icon--page" src="/image/common/page-icon.png" alt="">公式サイト
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="">
+                <img class="footer__icon--page" src="/image/common/page-icon.png" alt="">企業情報
+              </a>
+            </li>
+          </ul>
+          <ul class="footer__nav-items--bottom-right">
+            <li class="footer__nav-item">
+              <a href=""><span class="footer__arrow-right"></span>
+                当サイトのご利用規約
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="">
+                <img class="footer__icon--page" src="/image/common/page-icon.png" alt="">よくあるご質問
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="">
+                <img class="footer__icon--page" src="/image/common/page-icon.png" alt="">サービスについて
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="">
+                <img class="footer__icon--page" src="/image/common/page-icon.png" alt="">オンラインショップ
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <small class="footer__copyright">Copyright Aeonpet.Co.LTD.All rights reserved.</small>
+    </div>
+  </footer>
+</body>
+
+</html>

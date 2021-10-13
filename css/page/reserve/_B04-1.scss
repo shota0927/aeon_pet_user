@@ -1,0 +1,451 @@
+// --------------
+// B04-1-breadcrumb
+// --------------
+.B04-1-breadcrumb {
+  border-bottom: 1px solid #F2F2F2;
+}
+
+
+// --------------
+// B04-1-wrapper
+// --------------
+.B04-1-wrapper {
+  width: 100%;
+  max-width: 1010px;
+  margin-left: auto;
+  margin-right: auto;
+  @include mq(md) {
+    padding-left: $padding-pc;
+    padding-right: $padding-pc;
+  }
+}
+.B04-1-wrapper .pull-down {
+  width: 100%;
+  @include mq(md) {
+    max-width: 411px;
+  }
+}
+.B04-1-wrapper .pull-down__select {
+  font-size: 16px;
+  color: $color-text-main;
+  width: 100%;
+}
+.B04-1-wrapper .pull-down__select:invalid {
+  color: #D5D5D5;
+}
+
+
+// --------------
+// B04-1-inner
+// --------------
+.B04-1-inner {
+  max-width: 500px;
+  margin: 0 auto;
+  padding-left: $padding-sp;
+  padding-right: $padding-sp;
+  @include mq(md) {
+    max-width: 100%;
+  }
+}
+
+
+// --------------
+// B04-1-page-title
+// --------------
+.B04-1-page-title {
+  font-size: 24px;
+  font-weight: normal;
+  color: $color-main;
+  text-align: center;
+  margin-top: 29px;
+  @include mq(md) {
+    font-size: 30px;
+    margin-top: 40px;
+  }
+}
+
+
+// --------------
+// B04-1-section-title
+// --------------
+.B04-1-section-title {
+  font-size: 16px;
+  height: 37px;
+  font-weight: normal;
+  background-color: #F5F5F5;
+  display: flex;
+  align-items: center;
+}
+.B04-1-section-title__number {
+  display: inline-flex;
+  width: 37px;
+  height: 37px;
+  margin-right: 15px;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-bright-green;
+  color: #fff;
+}
+
+
+// --------------
+// B04-1-new-line
+// --------------
+.B04-1-new-line {
+  display: inline-block;
+}
+
+
+// --------------
+// B04-1-text
+// --------------
+.B04-1-text {
+  font-size: 14px;
+  line-height: 1.28571429;
+}
+
+// --------------
+// B04-1-u-mobile B04-1-u-desktop
+// --------------
+.B04-1-u-mobile {
+  display: block;
+  @include mq(md) {
+    display: none;
+  }
+}
+.B04-1-u-desktop {
+  display: none;
+  @include mq(md) {
+    display: table-cell;
+  }
+}
+
+
+// --------------
+// B04-1-pet-select
+// --------------
+.B04-1-pet-select {
+  margin-top: 17px;
+  @include mq(md) {
+    margin-top: 40px;
+  }
+}
+.B04-1-pet-select__box {
+  margin-top: 20px;
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+  }
+}
+.B04-1-pet-select__button {
+  margin-top: 10px;
+  text-align: right;
+  @include mq(md) {
+    margin-top: initial;
+    margin-left: auto;
+  }
+}
+.B04-1-pet-select__button .small-button--sign-up {
+  width: 135px;
+  font-size: 14px;
+}
+
+
+// --------------
+// B04-1-menu-select
+// --------------
+.B04-1-menu-select {
+  margin-top: 30px;
+}
+.B04-1-menu-select__pull-down {
+  margin-top: 20px;
+}
+.B04-1-menu-select__options {
+  margin-top: 15px;
+}
+.B04-1-menu-select__option:not(:first-child) {
+  margin-top: 10px;
+}
+
+
+// --------------
+// B04-1-option
+// --------------
+.B04-1-option {
+  border-radius: 4px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  padding-right: 16px;
+  font-size: 14px;
+  line-height: 1.28571429;
+  @include mq(md) {
+    font-size: 16px;
+  }
+}
+.B04-1-option__title {
+  line-height: 1.28571429;
+  @include mq(md) {
+    line-height: 1.28571429;
+  } 
+}
+.B04-1-option__check-icon {
+  display: inline-block;
+  width: 16px;
+  height: 10px;
+  background-size: cover;
+  margin-right: 20px;
+}
+.B04-1-option__delete-button,
+.B04-1-option__add-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  cursor: pointer;
+}
+.B04-1-option__delete-button {
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 50%;
+  font-size: 12px;
+  line-height: 1.28571429;
+}
+.B04-1-option__add-button {
+  width: 80px;
+  height: 26px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #DEDEDE;
+  font-size: 12px;
+  line-height: 1.28571429;
+  @include mq(md) {
+    width: 114px;
+    height: 34px;
+    font-size: 14px;
+  }
+}
+// アクティブのとき
+.B04-1-option--active {
+  background-color: $color-thin-green;
+  color: $color-main;
+  border: 1px solid $color-main;
+}
+.B04-1-option--active .B04-1-option__check-icon{
+  background-image: url(/image/common/check-icon-active.png);
+}
+.B04-1-option--active .B04-1-option__add-button {
+  display: none;
+}
+// アクティブでないとき
+.B04-1-option--inactive {
+  background-color: #F5F5F5;
+  color: #888888;
+  margin-top: 20px;
+}
+.B04-1-option--inactive .B04-1-option__delete-button {
+  display: none;
+}
+.B04-1-option--inactive .B04-1-option__check-icon{
+  background-image: url(/image/common/check-icon-in-active.png);
+}
+.B04-1-menu-select__text {
+  margin-top: 10px;
+}
+
+
+
+// --------------
+// B04-1-staff-select
+// --------------
+.B04-1-staff-select {
+  margin-top: 36px;
+}
+.B04-1-staff-select__box {
+  margin-top: 20px;
+}
+.B04-1-staff-select__text {
+  margin-top: 10px;
+}
+
+
+// --------------
+// B04-1-date-select
+// --------------
+.B04-1-date-select {
+  margin-top: 35px;
+}
+.B04-1-date-select__text {
+  margin-top: 20px;
+}
+.B04-1-date-select__table-head {
+  margin-top: 36px;
+  display: flex;
+  align-items: center;
+  padding-left: 7px;
+  padding-right: 7px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  @include mq(md) {
+    max-width: 641px;
+  }
+}
+.B04-1-date-select__table-head .pull-down {
+  width: 132px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.B04-1-date-select__table-head .pull-down::after {
+  top: 38%;
+}
+.B04-1-date-select__table-head .pull-down__select {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 17px;
+  line-height: 1.28571429;
+}
+.B04-1-date-select__table-head .small-button--last-week,
+.B04-1-date-select__table-head .small-button--next-week {
+  font-size: 14px;
+  width: 60px;
+}
+.B04-1-date-select__table-head .small-button--last-week::after {
+  left: 7.5px;
+}
+.B04-1-date-select__table-head .small-button--next-week::after {
+  right: 11px;
+}
+.B04-1-date-select__selected-date {
+  border: 1px solid #758B32;
+  border-radius: 4px;
+  padding: 17px 15px 15px;
+  margin-top: 25px;
+  font-size: 16px;
+  @include mq(md) {
+    max-width: 641px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 33px;
+    padding-bottom: 32px;
+  }
+}
+
+
+// --------------
+// B04-1-table
+// --------------
+.B04-1-table {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 500px;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  @include mq(md) {
+    max-width: 641px;
+  }
+}
+.B04-1-table__date {
+  height: 47px;
+  background-color: $color-bright-green;
+  border-right: 1px solid #fff;
+  font-size: 10px;
+  line-height: 1.28571429;
+  color: #fff;
+  font-weight: normal;
+}
+// 土曜の色
+.B04-1-table__date:nth-child(2) {
+  background-color: #6597A0;
+}
+// 日曜の色
+.B04-1-table__date:nth-child(3) {
+  background-color: #A26D8B;
+}
+.B04-1-table__date span {
+  display: block;
+  font-size: 16px;
+  font-family: 'Lato';
+  margin-bottom: 3px;
+}
+.B04-1-table__time {
+  width: 59px;
+  height: 40px;
+  font-family: 'Lato';
+  text-align: left;
+  padding-left: 10px;
+  border-bottom: 1px solid #D5D5D5;
+  background-color: #F4F4F4;
+  font-weight: normal;
+  @include mq(md) {
+    width: 71.48px;
+  }
+}
+.B04-1-table td {
+  border-bottom: 1px solid #EEEEEE;
+  border-right: 1px solid #EEEEEE;
+}
+.B04-1-table td:first-of-type {
+  border-left: 1px solid #EEEEEE;
+}
+// 土日の列の背景色
+.B04-1-table td:first-of-type,
+.B04-1-table td:nth-of-type(2) {
+  background-color: #F2F5E9;
+}
+// マルのセル
+.B04-1-table__circle {
+  background-image: url(/image/common/icon-circle.png);
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+// バツのセル
+.B04-1-table__cross {
+  background-image: url(/image/common/icon-cross.png);
+  background-size: 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+// セル選択時
+.B04-1-table__selected {
+  background-color: rgba($color: #F18B22, $alpha: 0.2);
+}
+
+
+// --------------
+// B04-1-coupon-select
+// --------------
+.B04-1-coupon-select {
+  margin-top: 30px;
+}
+.B04-1-coupon-select__options {
+  margin-top: 20px;
+}
+
+
+// --------------
+// B04-1-button-area
+// --------------
+.B04-1-button-area {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 66px;
+  @include mq(md) {
+    margin-top: 50px;
+    margin-bottom: 101px;
+  }
+}
+.B04-1-button-area__text {
+  margin-top: 43px;
+}
+.B04-1-button-area .sub-button {
+  margin-top: 22px;
+  margin-bottom: 0;
+}

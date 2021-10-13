@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>予約｜PETEMO グルーミングサロン 予約サイト</title>
+  <meta name="description" content="PETEMO グルーミングサロン 予約サイトの「予約」ページです。イオンペットは、動物と人間の幸せな共生社会の実現を目指します。">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- datepicker -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <!-- css -->
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/script.js"></script>
+  <script src="/js/search_shop/shop/B02.js"></script>
+  <link rel="icon" href="" />
+</head>
+
+<body>
+
+  <!-- ヘッダー（未ログイン） -->
+    <header class="header header--login">
+      <div class="header__left">
+        <h1>
+          <a href="/">
+            <picture class="header__logo" aria-hidden="true">
+              <source srcset="/image/common/logo-pc.png" media="(min-width: 768px)" class="header__logo-pc"/>
+              <img src="/image/common/logo-sp.png" alt="ロゴ" class="header__logo-sp" />
+            </picture>
+          </a>
+        </h1>
+        <a href="" class="header__search"><img src="/image/common/search-icon.png" alt="サーチアイコン">店舗検索・ご予約</a>
+      </div>
+      <div class="header__right">
+        <div class="header__btns">
+          <a href="" class="header__mypage">マイページ</a>
+        </div>
+        <div class="hamburger__menu js-hamburger--login">
+          <img src="/image/common/hamburger__menu-icon.png" alt="ハンバーガーアイコン">
+        </div>
+      </div>
+      <nav class="header__nav header-nav header-nav--login">
+        <div class="header-nav__title">
+          <p class="sp">こんにちは<br>○○さん  (マイページ)</p>
+          <p class="pc">こんにちは　○○さん  (マイページ)</p>
+          <div class="header-nav__bars js-bars">
+            <span class="header-nav__bar header-nav__bar--left"></span>
+            <span class="header-nav__bar header-nav__bar--right"></span>
+          </div>
+        </div>
+        <ul class="header-nav__items">
+          <li class="header-nav__item">
+            <a href="#"><img class="header-nav__title-icon" src="/image/common/home-icon.png" alt="">ホーム</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="#"><img class="header-nav__title-icon" src="/image/common/search-icon-small.png" alt="">店舗検索・ご予約</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="#"><img class="header-nav__title-icon" src="/image/common/current-booking-icon.png" alt="">現在のご予約<span class="header-nav__number header-nav__number--booking">99</span></a>
+          </li>
+          <li class="header-nav__item">
+            <a href="#"><img class="header-nav__title-icon" src="/image/common/mypage-icon-green.png" alt="">マイページ</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="#"><img class="header-nav__title-icon" src="/image/common/pet-info-icon.png" alt="">
+              ペット情報<img class="header-nav__dog-icon" src="/image/common/dog-icon.png" alt=""><span class="header-nav__number">99</span><img class="header-nav__cat-icon" src="../image/common/cat-icon.png" alt=""><span class="header-nav__number">99</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="header-nav__items">
+          <li class="header-nav__item">
+            <a href="#"><img class="header-nav__title-icon" src="/image/common/booking-icon-green.png" alt="">ご予約方法</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="#"><img class="header-nav__title-icon" src="/image/common/mypage-icon-green.png" alt="">マイページのご利用方法</a>
+          </li>
+          <div class="header-nav__logout-button">
+            <a href="" class="logout-button"><img src="/image/common/logout-icon.png" alt="ログアウトアイコン">ログアウト</a>
+          </div>
+        </ul>
+      </nav>
+      
+      <div class="header__burger-musk"></div>
+    </header>
+  <!-- breadcrumb  -->
+  <div class="breadcrumb B04-2-breadcrumb">
+    <div class="inner">
+      <span class="breadcrumb__item">
+        <a href="" class="brandcrumb__item-link">
+          <img src="/image/common/breadcrumb-top-icon.png" alt="トップに戻るアイコン" class="breadcrumb__item-icon">
+        </a>
+      </span>
+      /
+      <span class="breadcrumb__item">
+        <span class="brandcrumb__item-link">
+          予約
+        </span>
+      </span>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ B04-2-wrapper　-->
+  <main class="B04-2-wrapper">
+
+    <!-- B04-2-page-title -->
+    <h2 class="B04-2-page-title">PETEMO札幌苗穂店</h2>
+
+    <!-- B04-2-menu-select -->
+    <section class="B04-2-menu-select">
+      <h3 class="B04-2-section-title">
+        <span class="B04-2-section-title__number">1</span>予約するペット・メニューを選択
+      </h3>
+      <div class="B04-2-menu-select__inner">
+        <div class="B04-2-menu-select__pet-wrapper">
+          <div class="B04-2-menu-select__pet-name">
+            小太郎<span>×</span>
+          </div>
+          <!-- プルダウン 小 -->
+          <div class="B04-2-menu-select__pull-down pull-down">
+            <select class="pull-down__select" required>
+              <option value="">未選択</option>
+              <option value="option1" selected>シャンプーコース</option>
+              <option value="option2">コース2</option>
+              <option value="option3">コース3</option>
+            </select>
+          </div>
+          <ul class="B04-2-menu-select__options">
+            <li class="B04-2-menu-select__option B04-2-option B04-2-option--active">
+              <span class="B04-2-option__check-icon"></span>
+              トリートメント
+              <span class="B04-2-option__delete-button">×</span>
+              <span class="B04-2-option__add-button">追加</span>
+            </li>
+            <li class="B04-2-menu-select__option B04-2-option B04-2-option--inactive">
+              <span class="B04-2-option__check-icon"></span>
+              トリートメント
+              <span class="B04-2-option__delete-button">×</span>
+              <span class="B04-2-option__add-button">追加</span>
+            </li>
+            <li class="B04-2-menu-select__option B04-2-option B04-2-option--inactive">
+              <span class="B04-2-option__check-icon"></span>
+              オプションの選択
+              <span class="B04-2-option__delete-button">×</span>
+              <span class="B04-2-option__add-button">選択</span>
+            </li>
+          </ul>
+        </div>
+        <div class="B04-2-menu-select__pet-wrapper">
+          <div class="B04-2-menu-select__pet-name">
+            ムギ<span>×</span>
+          </div>
+          <!-- プルダウン 小 -->
+          <div class="B04-2-menu-select__pull-down pull-down">
+            <select class="pull-down__select" required>
+              <option value="">未選択</option>
+              <option value="option1" selected>シャンプーコース</option>
+              <option value="option2">コース2</option>
+              <option value="option3">コース3</option>
+            </select>
+          </div>
+          <ul class="B04-2-menu-select__options">
+            <li class="B04-2-menu-select__option B04-2-option B04-2-option--inactive">
+              <span class="B04-2-option__check-icon"></span>
+              オプションの選択
+              <span class="B04-2-option__delete-button">×</span>
+              <span class="B04-2-option__add-button">選択</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="B04-2-inner">
+        <div class="B04-2-menu-select__button">
+          <!-- ボタン（サブ） 新規登録 -->
+          <a href="" class="small-button--sign-up"><img src="/image/common/signup-icon.png" alt="十字アイコン">ペットを追加</a>
+        </div>
+        <p class="B04-2-menu-select__text B04-2-text">
+          ※最大5頭までご予約いただけます。<br>
+          ※複数頭ご予約の場合、担当スタッフ指名はできません。指名をご希望の際は1頭ずつご予約をお願いいたします。<br>
+          ※オプションはご予約時間前であれば変更・追加が可能です。
+        </p>
+      </div><!-- /.B04-2-inner -->
+    </section><!-- /.B04-2-menu-select -->
+
+    <!-- B04-2-date-select -->
+    <section class="B04-2-date-select">
+      <h3 class="B04-2-section-title">
+        <span class="B04-2-section-title__number">2</span>日時を選択
+      </h3>
+      <div class="B04-2-inner B04-2-date-select__inner">
+        <div class="B04-2-date-select__wrapper2">
+          <div class="B04-2-date-select__wrapper">
+            <div class="B04-2-date-select__box B04-2-select-box">
+              <div class="B04-2-select-box__title">希望日時</div>
+              <div class="B04-2-select-box__input">
+                <!-- カレンダー -->
+                <div class="calendar__wrapper">
+                  <form action="" class="box__datepicker">
+                    <input type="text" id="datepicker" class="datepicker" placeholder="日付を入力">
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="B04-2-date-select__box B04-2-select-box B04-2-select-box--time">
+              <div class="B04-2-select-box__content">
+                <div class="B04-2-select-box__title">受付時間</div>
+                <div class="B04-2-select-box__input pull-down">
+                  <!-- プルダウン 小 -->
+                  <select class="pull-down__select" required>
+                    <option value="">未選択</option>
+                    <option value="option1" selected>11:00</option>
+                    <option value="option2">コース2</option>
+                    <option value="option3">コース3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="B04-2-select-box__content">
+                <div class="B04-2-select-box__title">お迎え希望時間</div>
+                <div class="B04-2-select-box__input pull-down">
+                  <!-- プルダウン 小 -->
+                  <select class="pull-down__select" required>
+                    <option value="">未選択</option>
+                    <option value="option1" selected>20:00</option>
+                    <option value="option2">コース2</option>
+                    <option value="option3">コース3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="B04-2-date-select__text B04-2-text">
+            ※お迎え希望時間を変更いただくと、都度ご予約可否を確認できます。
+          </p>
+        </div>
+        <div class="B04-2-date-select__reservation-possible">
+          ご予約可能です
+        </div>
+      </div><!-- /.B04-2-inner -->
+    </section><!-- /.B04-2-staff-select -->
+
+    <!-- B04-2-coupon-select -->
+    <section class="B04-2-coupon-select">
+      <h3 class="B04-2-section-title">
+        <span class="B04-2-section-title__number">3</span>キャンペーン・クーポンの選択
+      </h3>
+      <div class="B04-2-coupon-select__inner">
+        <div class="B04-2-coupon-select__pet-wrapper">
+          <div class="B04-2-coupon-select__pet-name">
+            小太郎
+          </div>
+          <ul class="B04-2-coupon-select__options">
+            <li class="B04-2-menu-select__option B04-2-option B04-2-option--active">
+              <span class="B04-2-option__check-icon"></span>
+              キャンペーン・クーポン名
+              <span class="B04-2-option__delete-button">×</span>
+              <span class="B04-2-option__add-button">追加</span>
+            </li>
+            <li class="B04-2-menu-select__option B04-2-option B04-2-option--inactive">
+              <span class="B04-2-option__check-icon"></span>
+              <p class="B04-2-option__title">キャンペーン・クーポン名</p>
+              <span class="B04-2-option__delete-button">×</span>
+              <span class="B04-2-option__add-button">追加</span>
+            </li>
+            <li class="B04-2-menu-select__option B04-2-option B04-2-option--inactive">
+              <span class="B04-2-option__check-icon"></span>
+              キャンペーン・クーポン<br>の選択
+              <span class="B04-2-option__delete-button">×</span>
+              <span class="B04-2-option__add-button">選択</span>
+            </li>
+          </ul>
+        </div>
+        <div class="B04-2-coupon-select__pet-wrapper">
+          <div class="B04-2-coupon-select__pet-name">
+            ムギ
+          </div>
+          <ul class="B04-2-coupon-select__options">
+            <li class="B04-2-coupon-select__option B04-2-option B04-2-option--inactive">
+              <span class="B04-2-option__check-icon"></span>
+              <p class="B04-2-option__title">キャンペーン・クーポン<span class="B04-2-new-line">の選択</span></p>
+              <span class="B04-2-option__delete-button">×</span>
+              <span class="B04-2-option__add-button">選択</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section><!-- /.B04-2-menu-select -->
+
+    <!-- B04-2-button-area -->
+    <section class="B04-2-button-area">
+      <div class="B04-2-inner">
+        <!-- ボタン（最重要） -->
+        <a href="" class="most-important-button">予約確認へ</a>
+        <p class="B04-2-button-area__text B04-2-text">
+          ご希望のお日にちに空きがありませんか？
+        </p>
+        <!-- ボタン（戻る・修正など サブ） -->
+        <a href="" class="sub-button">別のサロンを検索する</a>
+      </div>
+    </section>
+
+  </main><!-- メインコンテンツ /.B04-2-wrapper　-->
+
+  <!-- footer  -->
+  <footer class="footer">
+    <a class="footer__page-top-button" href="#">
+      <span></span>
+    </a>
+    <div class="footer__inner">
+      <div class="footer__logo">
+        <img src="/image/common/footer-logo.png" alt="ロゴ">
+      </div>
+      <nav class="footer__nav">
+        <ul class="footer__nav-items--top">
+          <li class="footer__nav-item--top">
+            <a href="">
+              <img class="footer__icon" src="/image/common/booking-icon.png" alt="">ご予約方法
+            </a>
+          </li>
+          <li class="footer__nav-item--top">
+            <a href="">
+              <img class="footer__icon" src="/image/common/mypage-icon.png" alt="">マイページのご利用方法
+            </a>
+          </li>
+        </ul>
+        <div class="footer__wrapper">
+          <ul class="footer__nav-items--bottom-left">
+            <li class="footer__nav-item">
+              <a href=""><span class="footer__arrow-right"></span>
+                会員規約
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="">
+                <img class="footer__icon--page" src="/image/common/page-icon.png" alt="">プライバシーポリシー
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="">
+                <img class="footer__icon--page" src="/image/common/page-icon.png" alt="">お問い合わせ
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="">
+                <img class="footer__icon--page" src="/image/common/page-icon.png" alt="">公式サイト
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="">
+                <img class="footer__icon--page" src="/image/common/page-icon.png" alt="">企業情報
+              </a>
+            </li>
+          </ul>
+          <ul class="footer__nav-items--bottom-right">
+            <li class="footer__nav-item">
+              <a href=""><span class="footer__arrow-right"></span>
+                当サイトのご利用規約
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="">
+                <img class="footer__icon--page" src="/image/common/page-icon.png" alt="">よくあるご質問
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="">
+                <img class="footer__icon--page" src="/image/common/page-icon.png" alt="">サービスについて
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="">
+                <img class="footer__icon--page" src="/image/common/page-icon.png" alt="">オンラインショップ
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <small class="footer__copyright">Copyright Aeonpet.Co.LTD.All rights reserved.</small>
+    </div>
+  </footer>
+</body>
+
+</html>

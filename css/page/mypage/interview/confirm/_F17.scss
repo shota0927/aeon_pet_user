@@ -1,0 +1,132 @@
+
+@import "./_modules.scss";
+
+@mixin font-shape($font-color, $font-size: inherit, $font-weight: 400) {
+    font-size: $font-size;
+    color: $font-color;
+    font-weight: $font-weight;
+}
+
+@function getExtendClass($compoClass) {
+    $splitter: selector-parse($compoClass);
+    $self: nth(nth($splitter, 1), length(nth($splitter, 1)));
+    @return $self;
+}
+
+$font-size--pc-normal: 1.6rem;
+$font-size--sp-normal: 1.4rem;
+
+body.f17 {
+    min-width: 375px;
+}
+
+.f17-content {
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+
+    @include mq() {
+        box-sizing: content-box;
+        width: 100%;
+        margin-top: 36px;
+    }
+
+    &__title {
+        @include font-shape($color-main, 2.4rem);
+        text-align: center;
+
+        @include mq() {
+            font-size: 3rem;
+        }
+    }
+
+    &__note {
+        margin-top: 43px;
+        margin-bottom: 39px;
+        width: 100%;
+    }
+}
+
+.f17-confirm-table {
+    &__row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin-bottom: 3px;
+        min-height: 47px;
+
+    }
+
+    &__title {
+        background-color: $color-thin-green;
+        padding: $font-size--pc-normal;
+        flex-basis: 133px;
+        font-size: 1.2rem;
+        letter-spacing: -0.1rem;
+        padding: 20px;
+
+        @include mq() {
+            flex-basis: 248px;
+            font-size: $font-size--pc-normal;
+            padding: 13px 15px;
+        }
+    }
+
+    &__answer-content {
+        $self: getExtendClass(&);
+
+        background-color: $color-background-base;
+        padding: $font-size--pc-normal;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-basis: 208px;
+        padding: 13px 20px;
+        font-size: $font-size--sp-normal;
+
+        @include mq() {
+            flex-basis: 682px;
+            font-size: $font-size--pc-normal
+        }
+
+        &--anamnesis,
+        &--consultation,
+        &--checkup,
+        &--feces {
+            @extend #{$self};
+            padding: 25px 20px;
+        }
+
+        &--eating-sheet {
+            @extend #{$self};
+            padding: 50px 20px;
+        }
+    }
+
+    .f17-answer-content {
+        margin: auto;
+    }
+}
+
+.f17-anamnesis-list {
+    margin: $font-size--pc-normal 0;
+}
+
+.f17-registration-button,
+.f17-fix-button {
+    display: block;
+    width: 220px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin: 30px auto;
+}
+
+.f17-fix-button {
+    margin-bottom: 66px;
+
+    @include mq() {
+        margin-bottom: 101px;
+
+    }
+}

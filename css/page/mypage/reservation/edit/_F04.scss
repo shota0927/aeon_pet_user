@@ -1,0 +1,455 @@
+.main__underline{
+  color: #707070;
+}
+.main__mypage__reservation__edit__title{
+  display: flex;
+  justify-content: center;
+  color: #6F8D1B;
+  text-align: center;
+  font-weight: 100;
+  font-size: 2.4rem;
+  margin: 32px 0 16px 0;
+}
+
+.main__mypage__reservation__edit__reserv-table{
+  & th{
+    padding: 13px 15px 14px 15px;
+  }
+  & td{
+    display: block;
+    font-size: 1.4rem;
+    padding: 12px 15px;
+  }
+  & .reserve-day{
+    padding: 10px 0 5px 15px;
+  }
+  & .reserve-intime{
+    padding: 0 15px;
+  }
+  & .reserve-outtime{
+    padding: 5px 0 11px 15px;
+  }
+}
+
+.main__mypage__reservation__edit__option__container{
+  background-color: #F2F5E9;
+  border: 1px solid #6F8D1B;
+  border-radius: 4px;
+  padding: 17px 10px 20px 10px;
+  margin: 15px 0;
+  & hr{
+    margin: 0;
+  }
+}
+.main__mypage__reservation__edit__campaign__container{
+  background-color: #F2F5E9;
+  border: 1px solid #6F8D1B;
+  border-radius: 4px;
+  padding: 17px 10px 20px 10px;
+  margin: 30px 0 15px 0;
+  & hr{
+    margin: 0;
+  }
+}
+.main__mypage__reservation__edit__option-select{
+  & ul{
+    display: flex;
+  }
+  & .checkmark{
+    content: '';
+    width: 16px;
+    height: 10px;
+    border-left: 3px solid #6F8D1B;
+    border-bottom: 3px solid #6F8D1B;
+    transform: rotate(-45deg);
+  }
+  & .option-checkmark{
+    margin: 8px 20px 28px 25px;
+  }
+  & .option-title{
+    color: #6F8D1B;
+    margin: 4px 0 23px 0;
+  }
+  & .option-button{
+    display: flex;
+    align-items: flex-start;
+    margin-left: auto;
+    & .button{
+      margin-right: 2px;
+      background-color: #fff;
+      border: 1px solid #6F8D1B;
+      border-radius: 4px;
+      color: #6F8D1B;
+      font-size: 1.2rem;
+      padding: 5px 28px;
+    }
+  }
+}
+.main__mypage__reservation__edit__option-text1{
+  padding: 0 5px 15px 5px;
+  & .main__item{
+    margin-bottom: 11px;
+  }
+  & .main__item-price{
+    font-size: 1.6rem;
+    text-align: right;
+    & .option-textfont{
+      font-size: 1.2rem;
+    }
+  }
+}
+.main__mypage__reservation__edit__option-text2{
+  padding: 15px 5px 0 5px;
+  & .main__item{
+    margin-bottom: 11px;
+  }
+  & .main__item-price{
+    font-size: 1.6rem;
+    text-align: right;
+    & .option-textfont{
+      font-size: 1.2rem;
+    }
+  }
+}
+.main__mypage__reservation__choice__campaign__container{
+  background-color: #F7F7F7;
+  border-radius: 4px;
+  padding: 17px 12px;
+  margin: 15px 0;
+}
+.main__mypage__reservation__choice__option__container{
+  background-color: #F7F7F7;
+  border-radius: 4px;
+  padding: 17px 12px;
+  margin: 15px 0;
+}
+.main__mypage__reservation__edit__campaign-select{
+  & ul{
+    display: flex;
+  }
+  & .checkmark{
+    content: '';
+    width: 16px;
+    height: 10px;
+    border-left: 3px solid #DEDEDE;
+    border-bottom: 3px solid #DEDEDE;
+    transform: rotate(-45deg);
+  }
+  & .campaign-checkmark{
+    margin: 8px 20px 8px 13px;
+  }
+  & .campaign-title{
+    color: #888888;
+    margin: 4px 0 3px 0;
+  }
+  & .campaign-button{
+    display: flex;
+    align-items: flex-start;
+    margin-left: auto;
+    & .button{
+      background-color: #fff;
+      border: 1px solid #888888;
+      border-radius: 4px;
+      color: #888888;
+      font-size: 1.2rem;
+      padding: 5px 28px;
+    }
+  }
+}
+
+.main__mypage__reservation__edit__table-price {
+  margin-top: 30px!important;
+  & .table2{
+    border-collapse: collapse;
+    border-spacing: 0;
+    line-height: 1;
+    width: 100%;
+  }
+  & th{
+    font-size: 1.6rem;
+    font-weight: normal;
+    width: 120px;
+    background-color: #fff;
+    white-space: nowrap;
+    text-align: left;
+  }
+  & td{
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: right;
+  }
+  & .table-cource-th{
+    // padding: 0 0 10px 0;
+  }
+  & .table-cource-td{
+    // padding: 5px 0 10px 0;
+  }
+
+  & .table-option-th{
+    border-bottom: none;
+  }
+  & .table-option-td{
+    // padding: 15px 0 14px 0;
+  }
+  & .table-total-th{
+    padding: 7px 0 0 0;
+  }
+  & .table-total-td{
+    padding: 8px 0 0 0;
+  }
+  & .table-price-font{
+    font-size: 1.2rem;
+    margin-left: 3px;
+    margin-top: 5px;
+    font-weight: normal;
+  }
+}
+
+.main__mypage__reservation__edit__cation{
+  margin: 21px 0 31px 0;
+}
+.main__mypage__reservation__edit__button{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+  margin-top: 36px;
+}
+.main__mypage__reservation__edit__anchor{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 66px;
+}
+
+.f04_mypage__reservation__detail__text{
+  margin-top: 23px;
+  margin-bottom: 30px;
+}
+
+#F04__bold-text{
+  font-weight: 500;
+}
+
+#F04__mrg-top{
+  margin-top: 5px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .f04_mypage__reservation__detail__text{
+    margin-top: 20px;
+  }
+  .main__mypage__reservation__edit__title{
+    font-size: 3.0rem;
+    margin: 36px 0 39px 0;
+    & .edit-title-br{
+      display: none;
+    }
+  }
+  .main__mypage__reservation__edit__text{
+    margin: auto;
+    text-align: left;
+  }
+  .main__mypage__reservation__edit__reserv-table{
+    & th{
+      font-size: 1.6rem;
+      white-space: nowrap;
+      width: 248px;
+      padding: 13px 20px 16px 20px;
+    }
+    & td{
+      font-size: 1.6rem;
+      display: table-cell;
+      padding: 13px 20px 16px 20px;
+    }
+    & .reserve-day{
+      display: inline-block;
+      padding: 13px 0 16px 20px;
+    }
+    & .reserve-intime{
+      display: inline-block;
+      padding: 13px 0 16px 25px;
+    }
+    & .reserve-outtime{
+      display: inline-block;
+      padding: 13px 0 16px 16px;
+    }
+    & .reserve-br{
+      display: none;
+    }
+  }
+  .main__mypage__reservation__edit__option__container{
+    // width: 890px;
+    margin: 33px auto 0 auto;
+    padding: 15px 10px 20px 10px;
+  }
+  main__mypage__reservation__edit__campaign__container{
+    // width: 890px;
+    margin: 33px auto 0 auto;
+    padding: 15px 10px 20px 10px;
+  }
+  .main__mypage__reservation__edit__option-select{
+    & .option-checkmark{
+      margin: 12px 20px 32px 25px;
+    }
+    & .option-title{
+      margin: 7px 0 26px 0;
+    }
+    & .option-button{
+      & .button{
+        margin-right: 10px;
+        font-size: 1.4rem;
+        padding: 8px 43px 7px 43px;
+      }
+    }
+  }
+  .main__mypage__reservation__edit__option-text1{
+    font-size: 1.4rem;
+    padding: 0 15px 15px 15px;
+  }
+  .main__mypage__reservation__edit__option-text2{
+    font-size: 1.4rem;
+    padding: 15px 15px 0 15px;
+  }
+
+  .main__mypage__reservation__choice__campaign__container{
+    // width: 890px;
+    padding: 15px 20px 15px 25px;
+    margin: 14px auto;
+  }
+  .main__mypage__reservation__choice__option__container{
+    // width: 890px;
+    padding: 15px 20px 15px 25px;
+    margin: 14px auto;
+  }
+  .main__mypage__reservation__edit__campaign-select{
+    & .campaign-checkmark{
+      margin: 13px 20px 11px 0px;
+    }
+    & .campaign-title{
+      margin: 7px 0 6px 0;
+    }
+    & .campaign-button{
+      & .button{
+        font-size: 1.4rem;
+        padding: 8px 43px 7px 43px;
+      }
+    }
+  }
+  .main__mypage__reservation__edit__table-price{
+    width: 890px;
+    margin: 0 auto;
+    & .table-cource-td{
+      font-size: 2.4rem;
+    }
+    & .table-option-td{
+      font-size: 2.4rem;
+      padding: 5px 0 15px 0;
+    }
+    & .table-total-th{
+      padding: 12px 0 0 0;
+    }
+    & .table-total-td{
+      font-size: 2.4rem;
+      padding: 0;
+      margin-top: 5px;
+
+    }
+    & .table-price-font{
+      font-size: 1.6rem;
+      margin-left: 5px;
+      font-weight: normal;
+
+    }
+  }
+  .main__mypage__reservation__edit__cation{
+    display: none;
+  }
+  .main__mypage__reservation__edit__button{
+    margin: 36px 0 45px 0;
+  }
+  .main__mypage__reservation__edit__anchor{
+    margin-bottom: 101px;
+  }
+}
+
+.F04-detail__price-menu {
+  margin-top: 20px;
+  @include mq(md) {
+    margin-top: 30px;
+    padding: 0 20px;
+  }
+}
+
+
+// --------------
+// F04-price-menu
+// --------------
+.F04-price-menu__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  @include mq(md) {
+    padding-bottom: 5px;
+  }
+}
+.F04-price-menu__item:last-child {
+  @include mq(md) {
+    padding-bottom: 16px;
+  }
+}
+.F04-price-menu__item--total {
+  border-top: solid 1px #DEDEDE;
+  padding-top: 8px;
+  padding-bottom: 0;
+  @include mq(md) {
+    padding-top: 0;
+  }
+}
+.F04-price-menu__item.F04-price-menu__item--total {
+  @include mq(md) {
+    padding-bottom: 0;
+  }
+}
+.F04-price-menu__title {
+  font-size: 16px;
+  font-weight: 400;
+}
+.F04-price-menu__price {
+  font-size: 12px;
+  @include mq(md) {
+    font-size: 16px;
+  } 
+}
+.F04-price-menu__price span {
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 3px;
+  font-family: 'Lato';
+  @include mq(md) {
+    font-weight: 700;
+    font-size: 24px;
+  }
+}
+.F04-price-menu__caution {
+  font-size: 14px;
+  margin-top: 22px;
+  line-height: 1.42857143;
+  @include mq(md) {
+    margin-top: 20px;
+  }
+}
+
+.F04-container {
+  width: 100%;
+  max-width: 534px;
+  margin: 0 auto;
+  padding-left: $padding-sp;
+  padding-right: $padding-sp;
+  @include mq(md) {
+    padding-left: $padding-pc;
+    padding-right: $padding-pc;
+    max-width: 1010px;
+  }
+}

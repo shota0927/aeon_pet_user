@@ -1,0 +1,67 @@
+header,
+.E02_content {
+    text-align: center;
+}
+
+.E02_content {
+
+    &__title {
+        font-size: 30px;
+        color: #6F8D1B;
+        text-align: center;
+        margin-bottom: 40px;
+        margin-top:33px;
+
+    }
+}
+
+.E02_logout{
+  padding-right:17px;
+  padding-left:17px;
+}
+
+.E02_anchor-text {
+  display: inline-block;
+  color: $color-main;
+  text-decoration: underline;
+  line-height:100px;
+}
+
+.E02_syasen{
+  color:#E1E1E1;
+}
+
+.E02_hr{
+  height:1px;
+  background-color	:#F2F2F2;
+  color:#F2F2F2;
+  border: none;
+}
+
+.E02_nav__logout_ancer{
+  margin-bottom: 80px;
+}
+
+.E02_logout{
+  margin-bottom: 35px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+
+    .E02_content {
+
+        &__title {
+          font-size: 24px;
+          color: #6F8D1B;
+          text-align: center;
+          margin-bottom: 15px;
+          margin-top:30px;
+
+        }
+    }
+    .E02_logout{
+      text-align: left;
+    }
+}

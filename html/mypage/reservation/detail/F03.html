@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- meta情報 -->
+  <title>予約詳細｜PETEMO グルーミングサロン 予約サイト</title>
+  <meta name="description" content="PETEMO グルーミングサロン 予約サイトの「予約詳細」ページです。イオンペットは、動物と人間の幸せな共生社会の実現を目指します。" />
+  <meta name="keywords" content="" />
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- datepicker -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <!-- js -->
+  <script defer type="text/javascript" src="/js/mypage/reservation/detail/F03.js"></script>
+  <!-- css -->
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" href="" />
+</head>
+
+<body>
+
+  <!-- ヘッダー（未ログイン） -->
+  <header class="header header--login">
+    <div class="header__left">
+      <h1>
+        <a href="/">
+          <picture class="header__logo" aria-hidden="true">
+            <source srcset="/image/common/logo-pc.png" media="(min-width: 768px)" class="header__logo-pc" />
+            <img src="/image/common/logo-sp.png" alt="ロゴ" class="header__logo-sp" />
+          </picture>
+        </a>
+      </h1>
+      <a href="" class="header__search"><img src="/image/common/search-icon.png" alt="サーチアイコン">店舗検索・ご予約</a>
+    </div>
+    <div class="header__right">
+      <div class="header__btns">
+        <a href="" class="header__mypage">マイページ</a>
+      </div>
+      <div class="hamburger__menu js-hamburger--login">
+        <img src="/image/common/hamburger__menu-icon.png" alt="ハンバーガーアイコン">
+      </div>
+    </div>
+    <nav class="header__nav header-nav header-nav--login">
+      <div class="header-nav__title">
+        <p class="sp">こんにちは<br>○○さん (マイページ)</p>
+        <p class="pc">こんにちは　○○さん (マイページ)</p>
+        <div class="header-nav__bars js-bars">
+          <span class="header-nav__bar header-nav__bar--left"></span>
+          <span class="header-nav__bar header-nav__bar--right"></span>
+        </div>
+      </div>
+      <ul class="header-nav__items">
+        <li class="header-nav__item">
+          <a href="#"><img class="header-nav__title-icon" src="/image/common/home-icon.png" alt="">ホーム</a>
+        </li>
+        <li class="header-nav__item">
+          <a href="#"><img class="header-nav__title-icon" src="/image/common/search-icon-small.png" alt="">店舗検索・ご予約</a>
+        </li>
+        <li class="header-nav__item">
+          <a href="#"><img class="header-nav__title-icon" src="/image/common/current-booking-icon.png"
+              alt="">現在のご予約<span class="header-nav__number header-nav__number--booking">99</span></a>
+        </li>
+        <li class="header-nav__item">
+          <a href="#"><img class="header-nav__title-icon" src="/image/common/mypage-icon-green.png" alt="">マイページ</a>
+        </li>
+        <li class="header-nav__item">
+          <a href="#"><img class="header-nav__title-icon" src="/image/common/pet-info-icon.png" alt="">
+            ペット情報<img class="header-nav__dog-icon" src="/image/common/dog-icon.png" alt=""><span
+              class="header-nav__number">99</span><img class="header-nav__cat-icon" src="/image/common/cat-icon.png"
+              alt=""><span class="header-nav__number">99</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="header-nav__items">
+        <li class="header-nav__item">
+          <a href="#"><img class="header-nav__title-icon" src="/image/common/booking-icon-green.png" alt="">ご予約方法</a>
+        </li>
+        <li class="header-nav__item">
+          <a href="#"><img class="header-nav__title-icon" src="/image/common/mypage-icon-green.png"
+              alt="">マイページのご利用方法</a>
+        </li>
+        <div class="header-nav__logout-button">
+          <a href="" class="logout-button"><img src="/image/common/logout-icon.png" alt="ログアウトアイコン">ログアウト</a>
+        </div>
+      </ul>
+    </nav>
+
+    <div class="header__burger-musk"></div>
+  </header>
+
+  <!-- パンくずリスト -->
+  <div class="breadcrumb breadcrumb__bottom-border">
+    <div class="inner">
+      <span class="breadcrumb__item">
+        <a href="" class="brandcrumb__item-link">
+          <img src="/image/common/breadcrumb-top-icon.png" alt="トップに戻るアイコン" class="breadcrumb__item-icon">
+        </a>
+      </span>
+      /
+      <span class="breadcrumb__item breadcrumb__item--orange">
+        <a href="" class="brandcrumb__item-link brandcrumb__text--orange">
+          マイページ
+        </a>
+      </span>
+      /
+      <span class="breadcrumb__item">
+        <a href="" class="brandcrumb__item-link brandcrumb__text--orange">
+          予約状況
+        </a>
+      </span>
+      /
+      <span class="breadcrumb__item">
+        <span class="brandcrumb__item-link">
+          予約詳細
+        </span>
+      </span>
+    </div>
+  </div>
+
+  <!-- キャンセルモーダル -->
+  <div class="F03-cancel-modal">
+    <div class="F03-cancel-modal__wrapper">
+      <div class="F03-cancel-modal__container">
+        <!-- ×ボタン -->
+        <button class="icon__cross F03-cancel-modal__xbtn">
+          <i class="fas fa-times circle__icon--cross"></i>
+        </button>
+        <!-- アラートメッセージ --> 
+        <img class="F03-cancel-modal__alert-icon" src="/image/mypage/reservation/detail/F03_cancel_image/feather-alert-circle.png" alt="アラートアイコン">
+        <p class="F03-cancel-modal__text">この予約をキャンセルしますか？</p>
+        <p class="F03-cancel-modal__sub-text">
+          キャンセルを確定させますと、<br>
+          再度同じ日時にご予約ができなくなる可能性があります。
+        </p>
+        <div class="F03-cancel-modal__interview-wrapper">
+          <!-- キャンセル理由 -->
+          <div class="F03-cancel-modal__interview F03-interview">
+            <p class="F03-interview__title">キャンセル理由</p>
+            <div class="input__wrapper select__wrapper--shevron F03-interview__pulldown">
+              <select name="cancel-reason" class="select__wrapper">
+                <option value="" class="select__option" selected>選択してください</option>
+                <option value="option1" class="select__option">選択済み項目1</option>
+                <option value="option2" class="select__option">選択済み項目2</option>
+              </select>
+            </div>
+          </div>
+          <!-- その他メモ -->
+          <div class="F03-cancel-modal__interview F03-interview">
+            <p class="F03-interview__title">その他メモ</p>
+            <div class="textarea__wrapper F03-interview__textarea">
+              <textarea name="other-memo" class="textarea" placeholder="入力してください"></textarea>
+            </div>
+          </div>
+        </div>
+        <!-- ボタン類 -->
+        <div class="F03-cancel-modal__btn-wrapper F03-btn-wrapper">
+          <a class="sub-button F03-btn-wrapper__button">予約をキャンセルしない</a><br class="F03-u-mobile">
+          <a class="sub-button F03-btn-wrapper__button F03-btn-wrapper__button--red">予約をキャンセルする</a>
+        </div>
+      </div><!-- /.F03-cancel-modal__container -->
+    </div><!-- /.F03-cancel-modal__wrapper -->
+  </div><!-- キャンセルモーダル終わり -->
+    
+    
+    <!-- メインコンテンツ F03-wrapper -->
+    <main class="F03-inner">
+      
+    <!-- F03-page-title -->
+    <h2 class="F03-page-title">ご予約内容詳細</h2>
+    
+    <!-- セクション F03-detail -->
+    <section class="F03-detail">
+      <!-- F03-table -->
+      <table class="F03-detail__table F03-table">
+        <tbody>
+          <tr>
+            <th>サロン</th>
+            <td>PETEMO札幌苗穂店</td>
+          </tr>
+          <tr>
+            <th>来店日時</th>
+            <td>
+              2021年7月1日（木）<br class="F03-u-mobile">受付時間：9:00<br class="F03-u-mobile">お迎え予定時間：15:00</td>
+          </tr>
+          <tr>
+            <th>お名前</th>
+            <td>小太郎（コタロウ）</td>
+          </tr>
+          <tr>
+            <th>コース</th>
+            <td>シャンプーコース</td>
+          </tr>
+          <tr>
+            <th>オプション</th>
+            <td>トリートメント</td>
+          </tr>
+          <tr>
+            <th>スタッフ</th>
+            <td>指名なし</td>
+          </tr>
+          <tr>
+            <th>キャンペーン<br class="F03-u-mobile">クーポン</th>
+            <td>初回00％OFF</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- F03-price-menu -->
+      <div class="F03-detail__price-menu F03-price-menu">
+        <dl>
+          <div class="F03-price-menu__item">
+            <dt class="F03-price-menu__title">シャンプーコース</dt>
+            <dd class="F03-price-menu__price"><span>11,000</span>円（税抜）〜</dd>
+          </div>
+          <div class="F03-price-menu__item">
+            <dt class="F03-price-menu__title">トリートメント</dt>
+            <dd class="F03-price-menu__price"><span>+1,800</span>円（税抜）〜</dd>
+          </div>
+          <div class="F03-price-menu__item F03-price-menu__item--total">
+            <dt class="F03-price-menu__title">合計金額</dt>
+            <dd class="F03-price-menu__price"><span>12,800</span>円（税込）〜</dd>
+          </div>
+        </dl>
+        <p class="F03-price-menu__caution">
+          表示は目安金額です。実際にお支払いいただく金額と異なる場合があります。<br>
+          ミックス犬種ご利用料金は、ご来店時に類似犬種の料金にて改めてご案内させていただきます。
+        </p>
+      </div>
+
+      <div class="F03-detail__button">
+        <!-- ボタン（最重要） -->
+        <a href="#" class="most-important-button">オプション・キャンペーンを変更する</a>
+      </div>
+    
+    </section><!-- /.セクション F03-detail -->
+
+    <!-- セクション F03-cancel -->
+    <section class="F03-cancel">
+      <p class="F03-cancel__text">
+        ご予約日時・ペットを変更する場合は、以下よりキャンセルしてあらたに予約を行ってください。
+      </p>
+      <div class="F03-cancel__limit">
+        マイページからのキャンセル可能期限
+        <span>2021年6月30日（土）23:59</span>
+      </div>
+      <div class="F03-cancel__button">
+        <!-- ボタン（最重要） -->
+        <a class="F03-cancel__cancel-button most-important-button">この予約をキャンセルする</a>
+      </div>
+      <p class="F03-cancel__text2">
+        当日のキャンセルにつきましては、店舗へ直接ご連絡ください。
+      </p>
+      <div class="F03-cancel__anchor-text">
+        <!-- アンカーテキスト（右矢印） -->
+        <a href="#" class="anchor-text"><span class="anchor-text__right-arrow"></span>一覧へ戻る</a>
+      </div>
+    </section>
+
+  </main><!-- /.メインコンテンツ F03-wrapper -->
+
+
+
+
+
+  <!-- フッター -->
+  <footer class="footer">
+    <a class="footer__page-top-button" href="#">
+      <span></span>
+    </a>
+    <div class="footer__inner">
+      <div class="footer__logo">
+        <img src="/image/common/footer-logo.png" alt="ロゴ">
+      </div>
+      <nav class="footer__nav">
+        <ul class="footer__nav-items--top">
+          <li class="footer__nav-item--top">
+            <a href="">
+              <img class="footer__icon" src="/image/common/booking-icon.png" alt="">ご予約方法
+            </a>
+          </li>
+          <li class="footer__nav-item--top">
+            <a href="">
+              <img class="footer__icon" src="/image/common/mypage-icon.png" alt="">マイページのご利用方法
+            </a>
+          </li>
+        </ul>
+        <div class="footer__wrapper--top">
+          <ul class="footer__nav-items--bottom-left">
+            <li class="footer__nav-item">
+              <a href=""><span class="footer__arrow-right"></span>
+                会員規約
+              </a>
+            </li>
+
+            <li class="footer__nav-item">
+              <a href=""><span class="footer__arrow-right"></span>
+                当サイトのご利用規約
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__wrapper">
+          <ul class="footer__nav-items--bottom-left">
+            <li class="footer__nav-item">
+              <a href="">
+                <img class="footer__icon--page" src="/image/common/page-icon.png" alt="">企業情報
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="">
+                <img class="footer__icon--page" src="/image/common/page-icon.png" alt="">ぺても公式サイト
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="">
+                <img class="footer__icon--page" src="/image/common/page-icon.png" alt="">プライバシーポリシー
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="">
+                <img class="footer__icon--page" src="/image/common/page-icon.png" alt="">お問い合わせ
+              </a>
+            </li>
+          </ul>
+
+          <ul class="footer__nav-items--bottom-right">
+            <li class="footer__nav-item">
+              <a href="">
+                <img class="footer__icon--page" src="/image/common/page-icon.png" alt="">サロンサービス
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="">
+                <img class="footer__icon--page" src="/image/common/page-icon.png" alt="">よくあるご質問
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="">
+                <img class="footer__icon--page" src="/image/common/page-icon.png" alt="">オンラインストア
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <small class="footer__copyright">Copyright Aeonpet.Co.LTD.All rights reserved.</small>
+    </div>
+  </footer>
+
+
+  <!-- js -->
+  <script defer type="text/javascript" src="/js/script.js"></script>
+  <script defer type="text/javascript" src="/js/mypage/reservation/F03.js"></script>
+</body>
+
+</html>

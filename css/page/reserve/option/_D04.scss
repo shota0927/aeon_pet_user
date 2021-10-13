@@ -1,0 +1,128 @@
+.main__underline{
+  color: #707070;
+}
+.main__reserve__option__title{
+  display: flex;
+  justify-content: center;
+  color: #6F8D1B;
+  font-weight: 100;
+  font-size: 2.4rem;
+  margin: 32px 0 16px 0;
+}
+.main__reserve__option__button{
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 66px 0;
+}
+@media screen and (min-width: 768px) {
+  .main__reserve__option__title{
+    font-size: 3.0rem;
+    margin: 36px 0 31px 0;
+  }
+  .main__reserve__option__button{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 101px 0;
+    @include mq(md) {
+      margin-top: 40px;
+    }
+  }
+}
+.D04-container{
+  margin: auto;
+  max-width: 500px;
+  @include mq(md) {
+    max-width: 1010px;
+  }
+}
+.D04-option:not(:last-child) {
+  margin-bottom: 20px;
+}
+.D04-option__wrapper {
+  display: block;
+  padding: 15px 10px 23px;
+  background-color: #F2F5E9;
+  border-radius: 10px;
+  position: relative;
+  @include mq(md) {
+    padding: 20px 20px 23px;
+  }
+}
+.D04-option__title {
+  display: block;
+  color: #6F8D1B;
+  text-align: left;
+  margin-bottom: 18px;
+  font-size: 16px;
+  @include mq(md) {
+    font-size: 18px;
+  }
+}
+.D04-option__text {
+  display: block;
+  font-size: 14px;
+  @include mq(md) {
+    font-size: 16px;
+  }
+}
+.D04-option__price {
+  display: block;
+  text-align: right;
+  margin-right: 40px;
+  line-height: 1;
+  margin-top: 16px;
+  font-size: 12px;
+  @include mq(md) {
+    font-size: 16px;
+    margin-top: 51px;
+    margin-right: 25px;
+  }
+}
+.D04-option__price .D04-number {
+  font-weight: bold;
+  font-family: "Lato";
+  margin-right: 5px;
+  font-size: 16px;
+  
+  @include mq(md) {
+    font-size: 24px;
+  }
+}
+// チェック前
+.D04-option__input + .D04-option__label .D04-option__wrapper::before{
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  width: 22px;
+  height: 22px;
+  margin-top: -10px;
+  right: 20px;
+  bottom: 23px;
+  border-radius: 4px;
+  border: 1px solid;
+  border-color:  #D5D5D5;
+  background-color: #FFF;
+  z-index: 10;
+}
+// チェック後
+.D04-option__input:checked + .D04-option__label .D04-option__wrapper::before{
+  border: initial;
+  background-color: $color-main;
+}
+.D04-option__input:checked + .D04-option__label .D04-option__wrapper::after{
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  width: 13px;
+  height: 7px;
+  margin-top: -9px;
+  right: 24px;
+  bottom: 32px;
+  transform: rotate(-45deg);
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  border-color: #fff;
+  z-index: 11;
+}

@@ -1,0 +1,78 @@
+.f14__pic__main__wrapper {
+
+    .f14__pic__txt--pet-infomation-detales {
+        color: $color-main;
+        text-align: center;
+        margin: 37px 0 19px 0;
+        font-size: 18pt;
+
+        @media screen and(min-width:768px) {
+            font-size: 24pt;
+            margin: 42px 0 43px 0;
+
+        }
+    }
+
+    .f14__pic__table__wrapper {
+        display: inline-block;
+
+        .f14__pic__main-sentence {
+            font-size: 12pt;
+            text-align: center;
+        }
+
+
+        .f14__pic__table--pet-infomation {
+            margin-top: 33px;
+
+            @media screen and(min-width:768px) {
+                margin-top: 48px;
+
+            }
+
+
+            .f14__pic__table__text--left {
+                width: 39%;
+                font-size: 87%;
+                line-height: 2rem;
+
+                @media screen and(min-width:768px) {
+                    font-size: 12pt;
+                    width: 26.7%;
+                    line-height: 2rem;
+                }
+
+            }
+
+            .f14__pic__table__text--right {
+                font-size: 100%;
+                line-height: 2rem;
+
+                @media screen and(min-width:768px) {
+                    font-size: 12pt;
+                    line-height: 2rem;
+                }
+            }
+        }
+    }
+
+    .f14__pic__btn--sign-up {
+        display: block;
+        margin: 30px auto 0 auto;
+
+        @media screen and(min-width:768px) {
+            margin: 40px auto 0 auto;
+
+        }
+    }
+
+    .f14__pic__btn--fix {
+        display: block;
+        margin: 20px auto 66px auto;
+
+        @media screen and(min-width:768px) {
+            margin: 20px auto 101px auto;
+
+        }
+    }
+}
