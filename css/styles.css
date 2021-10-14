@@ -2290,7 +2290,7 @@ select:invalid {
 .icon__text--required,
 .icon__text--optional {
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 10px;
 }
 
 .icon__wrapper--optional, .c03-icon__wrapper--optional, .c06-icon__wrapper--optional, .f09-icon__wrapper--optional, .f12-icon__wrapper--optional, .f13-icon__wrapper--optional, .f16-icon__wrapper--optional {
@@ -6677,10 +6677,6 @@ body.b02 {
   height: 16px;
 }
 
-.main__member__input-title .icon__text--required {
-  font-size: 1.0rem;
-}
-
 .main__member__subtext {
   font-size: 1.6rem;
   margin: 0 0 0 10px;
@@ -10687,10 +10683,6 @@ body.c06 .inactive {
   height: 16px;
 }
 
-.main__password__input__passwordarea__title .icon__wrapper--required .icon__text--required, .main__password__input__passwordarea__title .c03-icon__wrapper--required .icon__text--required, .main__password__input__passwordarea__title .c06-icon__wrapper--required .icon__text--required, .main__password__input__passwordarea__title .f09-icon__wrapper--required .icon__text--required, .main__password__input__passwordarea__title .f12-icon__wrapper--required .icon__text--required, .main__password__input__passwordarea__title .f13-icon__wrapper--required .icon__text--required, .main__password__input__passwordarea__title .f16-icon__wrapper--required .icon__text--required {
-  font-size: 10px;
-}
-
 .main__password__input__passwordarea__input {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13469,6 +13461,10 @@ body.f09 .inactive {
   text-align: center;
 }
 
+.f09__mieai__wrapper--required {
+  margin-bottom: 3px;
+}
+
 .main__underline {
   display: block;
   width: 100%;
@@ -13553,14 +13549,14 @@ body.f09 .inactive {
   color: #6F8D1B;
   text-align: center;
   margin: 42px 0 45px 0;
-  font-size: 30pt;
+  font-size: 30px;
   font-weight: 400;
   font-family: "Noto Sans JP", "Lato", sans-serif;
 }
 
 @media screen and (max-width: 768px) {
   .f11__pic__main__wrapper .f11__pic__txt--pet-infomation-detales {
-    font-size: 24pt;
+    font-size: 24px;
     margin: 37px 0 19px 0;
   }
 }
@@ -15723,12 +15719,12 @@ select {
   color: #6F8D1B;
   text-align: center;
   margin: 37px 0 19px 0;
-  font-size: 18pt;
+  font-size: 24px;
 }
 
 @media screen and (min-width: 768px) {
   .f14__pic__main__wrapper .f14__pic__txt--pet-infomation-detales {
-    font-size: 24pt;
+    font-size: 30px;
     margin: 42px 0 43px 0;
   }
 }
@@ -15739,7 +15735,13 @@ select {
 
 .f14__pic__main__wrapper .f14__pic__table__wrapper .f14__pic__main-sentence {
   font-size: 12pt;
-  text-align: center;
+  text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  .f14__pic__main__wrapper .f14__pic__table__wrapper .f14__pic__main-sentence {
+    text-align: center;
+  }
 }
 
 .f14__pic__main__wrapper .f14__pic__table__wrapper .f14__pic__table--pet-infomation {
@@ -16871,7 +16873,7 @@ header,
 }
 
 .C02_content__title {
-  font-size: 2.4rem;
+  font-size: 30px;
   color: #6F8D1B;
   font-weight: normal;
   text-align: center;
@@ -17086,6 +17088,12 @@ header,
   font-size: 30px;
 }
 
+@media screen and (max-width: 768px) {
+  .C05_nav__title {
+    font-size: 24px;
+  }
+}
+
 .C05_nav__text {
   margin-bottom: 33px;
   margin-top: 38px;
@@ -17131,16 +17139,17 @@ header,
 
 @media screen and (max-width: 768px) {
   .C05_nav__text {
+    text-align: left;
     font-size: 16px;
-    padding-left: 17px;
-    padding-right: 17px;
+    margin-top: 14px;
     margin-bottom: 30px;
   }
   .C05_nav__text2 {
+    text-align: left;
     font-size: 16px;
-    padding-left: 17px;
-    padding-right: 17px;
-    margin-bottom: 30px;
+  }
+  .C05_nav__text3 {
+    text-align: left;
   }
   .C05_nav__btn {
     text-align: center;
